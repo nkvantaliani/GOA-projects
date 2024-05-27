@@ -1,6 +1,9 @@
 import turtle
 from random import randint
 
+"""This function draws a range of mountains on the screen.
+Each mountain peak is randomly generated within a predefined range,
+and the number of mountains drawn is based on the width of the screen."""
 def drawMountains(project):
     screen_width = turtle.window_width()
     peak_distance = screen_width // 10  
@@ -10,31 +13,60 @@ def drawMountains(project):
     project.color("#057203")  
     project.fillcolor("#057203")  
     project.begin_fill()
+
+    #Loop through each mountain peak
     for peak in range(1, 11):
+        #Move to the next peak position   
         project.goto(-screen_width // 2 + peak * peak_distance, randint(40, 160))
     project.goto(screen_width // 2, -200)
     project.goto(-screen_width // 2, -200)
     project.goto(-screen_width // 2, 80)
     project.end_fill()
 
+"""This function draws battlements on the screen, forming a wall-like structure.
+Parameters:
+project: The turtle project to draw the battlements.
+x: The starting x-coordinate of the battlements.
+y: The starting y-coordinate of the battlements.
+w: The width of the battlements.
+h: The height of the battlements."""
 def drawBattlements(project, x, y, w, h):
     project.penup()
     project.goto(x, y)
     project.pendown()
-    project.color("#DBDEF3") 
-    project.fillcolor("#373D67")  
+    project.color("#DBDEF3")
+    project.fillcolor("#373D67")
     project.begin_fill()
+
+    #Calculate the end point of the battlements
     xEnd = x + w
+
+    #Loop until reaching the end of the battlements
     while x < xEnd:
+        # Draw the vertical line of the battlement
         project.goto(x, y)
         project.goto(x, y + h)
         project.goto(x + 20, y + h)
         project.goto(x + 20, y)
+
+    #Check if there's enough space for the next battlement
         if x + 20 < xEnd:
             project.goto(x + 40, y)
+
+    #Move to the next position for drawing the next battlement
         x = x + 40
+
+    #End filling the battlements shape
     project.end_fill()
 
+"""This function draws a wall on the screen, optionally with battlements (crenellation) on top.
+Parameters:
+project: The turtle project to draw the wall.
+x: The starting x-coordinate of the wall.
+y: The starting y-coordinate of the wall.
+w: The width of the wall.
+h: The height of the wall.
+crenellation: A boolean value indicating whether to draw battlements on top of the wall."""
 def drawWall(project, x, y, w, h, crenellation):
     project.penup()
     project.goto(x, y)
@@ -47,9 +79,17 @@ def drawWall(project, x, y, w, h, crenellation):
     project.goto(x, y + h)
     project.goto(x, y)
     project.end_fill()
+    #Draw battlements if required
     if crenellation:
         drawBattlements(project, x, y + h, w, 20)
 
+"""This function draws a triangular roof on the screen.
+Parameters:
+project: The turtle project to draw the roof.
+x: The starting x-coordinate of the roof.
+y: The starting y-coordinate of the roof.
+w: The width of the roof base.
+h: The height of the roof."""
 def drawRoof(project, x, y, w, h):
     project.penup()
     project.goto(x, y)
@@ -63,6 +103,15 @@ def drawRoof(project, x, y, w, h):
     project.goto(x, y)
     project.end_fill()
 
+"""This function draws a tower on the screen, optionally with battlements (crenellation) on top.
+Parameters:
+project: The turtle project to draw the tower.
+x: The starting x-coordinate of the tower.
+y: The starting y-coordinate of the tower.
+w: The width of the tower.
+h: The height of the tower.
+crenellation: A boolean value indicating whether to draw battlements on top of the tower.
+"""
 def drawTower(project, x, y, w, h, crenellation):
     drawWall(project, x, y, w, h, False)
     if crenellation:
@@ -70,6 +119,14 @@ def drawTower(project, x, y, w, h, crenellation):
     else:
         drawRoof(project, x - 10, y + h, w + 20, 60)
 
+"""This function draws a door on the screen.
+Parameters:
+project: The turtle project to draw the door.
+x: The x-coordinate of the center of the door.
+y: The y-coordinate of the bottom of the door.
+w: The width of the door.
+h: The height of the door.
+"""
 def drawDoor(project, x, y, w, h):
     project.penup()
     project.goto(x - w // 2, y)
@@ -91,6 +148,7 @@ def drawDoor(project, x, y, w, h):
     project.circle(w // 2, 180)  
     project.end_fill()
 
+#This function draws a loophole (opening) on the screen.
 def drawLoophole(project, x, y, w, h):
     project.penup()
     project.goto(x - w // 2, y)
@@ -105,6 +163,7 @@ def drawLoophole(project, x, y, w, h):
     project.goto(x - w // 2, y)
     project.end_fill()
 
+#this function draws a GOA flag
 def drawGOAFlag(project, x, y, w, h):
     project.penup()
     project.goto(x, y)
@@ -116,20 +175,19 @@ def drawGOAFlag(project, x, y, w, h):
     project.goto(x, y + h * 2)
     project.goto(x, y)
     project.end_fill()
-
-   
     project.penup()
     project.goto(x + w // 2, y + h) 
     project.pendown()
     project.color("#00FF00")  
     project.write("GOA", align="center", font=("Arial", int(w // 5), "bold"))
 
-
+#This function draws a queen chess piece on the screen.
 def drawQueen(project, x, y):
+    # Draw the main body of the queen
     project.penup()
     project.goto(x, y)
     project.pendown()
-    project.color("#800080")  
+    project.color("#800080")
     project.fillcolor("#800080")
     project.begin_fill()
     project.goto(x - 20, y)
@@ -138,10 +196,11 @@ def drawQueen(project, x, y):
     project.goto(x - 20, y)
     project.end_fill()
 
+    #Draw the dress part of the queen
     project.penup()
     project.goto(x, y + 70)
     project.pendown()
-    project.color("#FFDAB9")  
+    project.color("#FFDAB9")
     project.fillcolor("#FFDAB9")
     project.begin_fill()
     project.goto(x - 10, y + 60)
@@ -151,10 +210,11 @@ def drawQueen(project, x, y):
     project.goto(x - 10, y + 60)
     project.end_fill()
 
+    #Draw the head part of the queen
     project.penup()
     project.goto(x - 10, y + 70)
     project.pendown()
-    project.color("#FFD700")  
+    project.color("#FFD700")
     project.fillcolor("#FFD700")
     project.begin_fill()
     project.goto(x - 10, y + 70)
@@ -165,20 +225,24 @@ def drawQueen(project, x, y):
     project.goto(x - 10, y + 70)
     project.end_fill()
 
+    # Draw the eyes of the queen
     project.penup()
     project.goto(x - 5, y + 65)
     project.pendown()
-    project.color("#000000")  
+    project.color("#000000")
     project.dot(2)
     project.penup()
     project.goto(x + 5, y + 65)
     project.pendown()
     project.dot(2)
+
+    #Draw the crown part of the queen
     project.penup()
     project.goto(x, y + 62)
     project.pendown()
     project.goto(x, y + 60) 
 
+    # Draw the crown extensions
     project.penup()
     project.goto(x - 20, y + 20)
     project.pendown()
@@ -186,9 +250,12 @@ def drawQueen(project, x, y):
     project.penup()
     project.goto(x + 20, y + 20)
     project.pendown()
-    project.goto(x + 30, y + 30)  
+    project.goto(x + 30, y + 30)
 
+
+#This function draws a king chess piece on the screen.
 def drawKing(project, x, y):
+    # Draw the main body of the king
     project.penup()
     project.goto(x, y)
     project.pendown()
@@ -201,10 +268,11 @@ def drawKing(project, x, y):
     project.goto(x - 20, y)
     project.end_fill()
 
+    # Draw the robe part of the king
     project.penup()
     project.goto(x, y + 70)
     project.pendown()
-    project.color("#FFDAB9")  
+    project.color("#FFDAB9")
     project.fillcolor("#FFDAB9")
     project.begin_fill()
     project.goto(x - 10, y + 60)
@@ -214,10 +282,11 @@ def drawKing(project, x, y):
     project.goto(x - 10, y + 60)
     project.end_fill()
 
+    # Draw the crown part of the king
     project.penup()
     project.goto(x - 10, y + 70)
     project.pendown()
-    project.color("#FFD700")  
+    project.color("#FFD700")
     project.fillcolor("#FFD700")
     project.begin_fill()
     project.goto(x - 10, y + 70)
@@ -230,20 +299,18 @@ def drawKing(project, x, y):
     project.goto(x - 10, y + 70)
     project.end_fill()
 
+    # Draw the eyes of the king
     project.penup()
     project.goto(x - 5, y + 65)
     project.pendown()
-    project.color("#000000")  
+    project.color("#000000")
     project.dot(2)
     project.penup()
     project.goto(x + 5, y + 65)
     project.pendown()
     project.dot(2)
-    project.penup()
-    project.goto(x, y + 62)
-    project.pendown()
-    project.goto(x, y + 60)  
 
+    #Draw the crown extensions
     project.penup()
     project.goto(x - 20, y + 20)
     project.pendown()
@@ -252,6 +319,7 @@ def drawKing(project, x, y):
     project.goto(x + 20, y + 20)
     project.pendown()
     project.goto(x + 30, y + 30)
+
 
 
 project = turtle.Turtle()

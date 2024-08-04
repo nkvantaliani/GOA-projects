@@ -1,0 +1,33 @@
+body{
+    font-family:Arial, sans-serif  ;
+    margin:0cap ;
+    padding: 0cap;
+    background:linear-gradient(#ecf3ee, #07f342,#188526) ;
+    color: rgb(13, 143, 72);
+
+
+    }
+    h1{
+    color:rgb(0, 0, 0);
+    font-family: "consolas", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    /* text-decoration: dotted underline; */
+
+
+    }
+    header{
+    background-color:cadetblue;
+    color:rgb(13, 143, 72);
+    padding: 10px;
+    text-align: center;
+}
+ /* p{
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 50px;
+    border: 10px solid black;
+    background-color: darkgreen;
+
+} */

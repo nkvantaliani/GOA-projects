@@ -1,0 +1,74 @@
+body{
+    
+    margin:0cap ;
+    padding: 0cap;
+    background:linear-gradient(rgb(190, 28, 28), rgb(199, 36, 36),rgb(20, 15, 15)) ;
+    
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+    color: rgb(145, 8, 8);
+ 
+    font-size: large;
+    
+
+    }
+
+.head {
+    text-align: center;
+}
+h1{
+    color:rgb(20, 19, 19);
+   
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    
+
+
+    }
+header{
+    background-color:rgb(141, 7, 7);
+    color:red ;
+    padding: 10px;
+    text-align: center;
+}
+
+ img{
+    height: 300px;
+    width: 200px;
+    padding: 0px;
+    margin: 50px;
+    border: 4px solid black;
+    
+    
+    
+    
+}
+
+
+p {
+    background-color:rgb(145, 2, 2);
+    color:red ;
+    padding: 10px;
+    text-align: center;
+}
+
+h4 {
+    
+    font-size: small;
+    display: inline;
+    position: absolute; left: 25%;
+    margin-top: 150px;
+    padding: 15px;
+   
+}
+
+
+
+
+
+
+

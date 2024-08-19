@@ -1,0 +1,56 @@
+.main {
+    background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM0d2FocmQzM2d6ZXE4bHljczd4ZG5zbGh0MDVwOGh6YWN5dTd2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9tZc9Mzo9K0yOYx38U/giphy.gif");
+    background-size: cover;
+    padding: 120px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-align: center;
+    color: rgb(145, 8, 8);
+    text-shadow: 4px 3px 2px rgb(37, 0, 0);
+    font-size: x-large;
+}
+.logo {
+    width: 120px;
+
+}
+
+.line {
+    text-decoration: underline solid rgb(112, 2, 2);
+}
+a {
+    
+    margin-left: auto;
+    margin-right: auto
+}
+.footer{ 
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: rgb(145, 8, 8);
+    
+}
+.sec {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+
+}
+
+#pp {
+    font-size: large;
+}
+
+#pp:hover {
+    font-size: x-large;
+}
+
+#dd {
+    font-size: large;
+}
+
+#dd:hover {
+    font-size: x-large;
+}

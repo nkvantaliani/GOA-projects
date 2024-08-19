@@ -1,0 +1,87 @@
+div {
+    width: 200px;
+    height: 400px;
+    
+
+}
+
+body {
+    background:linear-gradient(#000000, #4e0101,#4e0101) ;
+}
+
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-align: center;
+    color: rgb(145, 8, 8);
+    
+    font-size: xx-large;
+}
+.bp {
+    width: 200px;
+    height: 300px;
+    background-image: url("Characters/images/blackpanther.webp");
+    background-size: cover;
+    display: inline-block;
+   
+}
+
+.bp:hover {
+    background-image: url("Characters/images/bp2.jpg");
+    background-size: cover;
+}
+
+.im {
+    width: 200px;
+    height: 300px;
+    background-image: url("Characters/images/ironman.webp");
+    background-size: cover;
+    display: inline-block;
+}
+
+.im:hover {
+    background-image: url("Characters/images/im2.jpg");
+    background-size: cover;
+}
+
+.ca {
+    width: 200px;
+    height: 300px;
+    background-image: url("Characters/images/captainamerica.webp");
+    background-size: cover;
+    display: inline-block;
+}
+
+.ca:hover {
+    background-image: url("Characters/images/ca2.jpg");
+    background-size: cover;
+}
+
+.sp {
+    width: 200px;
+    height: 300px;
+    background-image: url("Characters/images/spiderman.jpg");
+    background-size: cover;
+    display: inline-block;
+}
+
+.sp:hover {
+    background-image: url("Characters/images/sp2.jpg");
+    background-size: cover;
+}
+
+.wv {
+    width: 200px;
+    height: 300px;
+    background-image: url("Characters/images/Wolverine.webp");
+    background-size: cover;
+    display: inline-block;
+}
+
+.wv:hover {
+    background-image: url("Characters/images/wv2.jpg");
+    background-size: cover;
+}

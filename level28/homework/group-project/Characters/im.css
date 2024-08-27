@@ -1,0 +1,30 @@
+body {
+    background:linear-gradient(#8a0303, #bb5d11,#b46703) ;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-align: center;
+    color: #d09f42;
+    text-shadow: 4px 4px 4px rgb(185, 116, 26);
+    font-size: xx-large;
+}
+
+img {
+    display: inline;
+}
+
+p {
+    display: inline;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: medium;
+    color: #610303;;
+}
+
+.img_deg{float: left;}
+
+.pos_cen{position: absolute; left: 30%}

@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(179, 136, 136, 0.473);
+}
+
 .main {
     background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM0d2FocmQzM2d6ZXE4bHljczd4ZG5zbGh0MDVwOGh6YWN5dTd2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9tZc9Mzo9K0yOYx38U/giphy.gif");
     background-size: cover;
@@ -10,9 +14,13 @@
     color: rgb(145, 8, 8);
     text-shadow: 4px 3px 2px rgb(37, 0, 0);
     font-size: x-large;
+    border-radius: 15px;
+   
 }
 .logo {
-    width: 120px;
+    width: 90px;
+    position: relative;
+    bottom: 120px;
 
 }
 

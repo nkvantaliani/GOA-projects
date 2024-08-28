@@ -2,7 +2,7 @@ body{
     
     margin:0cap ;
     padding: 0cap;
-    background:linear-gradient(rgb(190, 28, 28), rgb(199, 36, 36),rgb(20, 15, 15)) ;
+    background-color: brown;
     
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
@@ -61,7 +61,17 @@ h4 {
     font-size: small;
     display: inline;
     position: absolute; left: 25%;
-    margin-top: 150px;
+    margin-top: 100px;
+    padding: 15px;
+    color: rgb(73, 2, 2);
+   
+}
+
+.hh4 {
+    font-size: small;
+    display: inline;
+    position: absolute; left: 25%;
+    margin-top: 70px;
     padding: 15px;
    
 }
@@ -72,8 +82,90 @@ h3 {
     padding-left: 200px;
     color: rgb(119, 255, 8);
     
+
 }
 
+
+.ir {
+    width: 200px;
+    height: 300px;
+    background-image: url("https://i.ebayimg.com/images/g/Sv8AAOSwb7Rc0l0P/s-l1600.webp");
+    background-size: cover;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+}
+
+.ir:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.av {
+    width: 200px;
+    height: 300px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/ka/f/f9/TheAvengers2012Poster.jpg");
+    background-size: cover;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+}
+
+.av:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.if {
+    width: 200px;
+    height: 300px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/ka/4/4d/Avengers_Infinity_War_poster.jpg");
+    background-size: cover;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+}
+
+.if:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+
+.sm {
+    width: 200px;
+    height: 300px;
+    background-image: url("https://geosaitebi.tv/uploads/posts/2021-12/spaider-meni-saxlisken-gza-ar-aris-qartulad.jpg");
+    background-size: cover;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+}
+
+.sm:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.ca {
+    width: 200px;
+    height: 300px;
+    background-image: url("https://adjaranet.to/uploads/posts/2019-08/1566748930_vsnxajtld0r02v9spypojqdzxuk.jpg");
+    background-size: cover;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+}
+
+.ca:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
 
 
 

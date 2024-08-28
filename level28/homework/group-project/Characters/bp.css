@@ -1,5 +1,6 @@
 body {
     background:linear-gradient(#111111, #8f0303,#8f0303) ;
+    overflow: hidden;
 }
 
 h1 {
@@ -15,6 +16,8 @@ h1 {
 
 img {
     display: inline;
+    position: relative;
+    bottom: 25px;
 }
 
 p {
@@ -22,8 +25,12 @@ p {
     margin-top: 100px;
     padding: 20px;
     font-size: medium;
+    border-radius: 15px;
+    box-shadow: 2px 6px 2px #00000077;
 }
 
 .img_deg{float: left;}
 
-.pos_cen{position: absolute; left: 30%}
+.pos_cen{position: absolute; left: 30%;
+}
+

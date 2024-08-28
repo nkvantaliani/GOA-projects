@@ -26,12 +26,16 @@ h1 {
     background-image: url("Characters/images/blackpanther.webp");
     background-size: cover;
     display: inline-block;
+    border-radius: 8px;
+   
    
 }
 
 .bp:hover {
-    background-image: url("Characters/images/bp2.jpg");
     background-size: cover;
+    transition: 1.5s;
+    transform: scale(1.05);
+   
 }
 
 .im {
@@ -40,11 +44,13 @@ h1 {
     background-image: url("Characters/images/ironman.webp");
     background-size: cover;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .im:hover {
-    background-image: url("Characters/images/im2.jpg");
     background-size: cover;
+    transition: 1.5s;
+    transform: scale(1.05);
 }
 
 .ca {
@@ -53,11 +59,13 @@ h1 {
     background-image: url("Characters/images/captainamerica.webp");
     background-size: cover;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .ca:hover {
-    background-image: url("Characters/images/ca2.jpg");
     background-size: cover;
+    transition: 1.5s;
+    transform: scale(1.05);
 }
 
 .sp {
@@ -66,11 +74,13 @@ h1 {
     background-image: url("Characters/images/spiderman.jpg");
     background-size: cover;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .sp:hover {
-    background-image: url("Characters/images/sp2.jpg");
     background-size: cover;
+    transition: 1.5s;
+    transform: scale(1.05);
 }
 
 .wv {
@@ -79,9 +89,11 @@ h1 {
     background-image: url("Characters/images/Wolverine.webp");
     background-size: cover;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .wv:hover {
-    background-image: url("Characters/images/wv2.jpg");
     background-size: cover;
+    transition: 1.5s;
+    transform: scale(1.05);
 }

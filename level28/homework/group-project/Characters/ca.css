@@ -1,0 +1,38 @@
+body {
+    background:linear-gradient(#17246e, #314f6e,#b1f0f8) ;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-align: center;
+    color: #e4ebf1;
+    text-shadow: 4px 4px 4px rgb(66, 137, 184);
+    font-size: xx-large;
+}
+
+img {
+    display: inline;
+    position: relative;
+    bottom: 40px;
+}
+
+p {
+    display: inline;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: medium;
+    color: #0d064d;
+    border-radius: 15px;
+    box-shadow: 2px 6px 2px #42488077;
+}
+
+.img_deg{float: left;}
+
+.pos_cen{position: absolute; left: 32%;
+    
+
+}

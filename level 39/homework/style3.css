@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 100vh;
+   
+}
+
+.text {
+    position: absolute;
+}
+
+.hello {
+    top: 10%;
+    right: 10%;
+    text-decoration: underline;
+}
+
+.world {
+    top: 20%;
+    left: 40%;
+    text-decoration: line-through;
+}
+
+.exclamation {
+    top: 30%;
+    left: 5%;
+    font-size: 24px;
+}
+
+.goal {
+    top: 40%;
+    left: 45%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.oriented {
+    top: 50%;
+    left: 60%;
+    text-decoration: overline;
+}
+
+.academy {
+    top: 60%;
+    left: 10%;
+    text-decoration: line-through;
+}
+
+.is {
+    top: 70%;
+    left: 20%;
+    text-decoration: underline;
+}
+
+.the {
+    top: 80%;
+    right: 30%;
+    text-decoration: underline;
+    color: green;
+}
+
+.best {
+    top: 85%;
+    left: 35%;
+    font-size: 32px;
+    color: grey;
+    text-decoration: overline;
+}
+
+.one {
+    top: 90%;
+    right: 10%;
+}

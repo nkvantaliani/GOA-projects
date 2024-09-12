@@ -1,0 +1,32 @@
+#main {
+    border-collapse: collapse;
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: smaller;
+    min-width: 420px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+   
+}
+#main thead tr {
+    background-color: rgb(248, 159, 208);
+    color: #000;
+    text-align: left;
+    font-weight: bold;
+}
+
+#main  td {
+    padding-top: 12px;
+    padding-bottom: 15px;
+}
+#main tbody tr {
+    border-bottom: 2px solid pink;
+    background-color: rgb(252, 231, 239);
+    
+}
+
+.bottom {
+    border-bottom: 2px solid black;
+}
+

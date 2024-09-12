@@ -1,0 +1,47 @@
+
+#div1 {
+    width: 90%;
+    background-color: #f897c8;
+    margin: 10px;
+    padding: 10px;
+}
+
+#div2 {
+    width: 75%;
+    background-color: #e96767;
+    margin: 10px;
+    padding: 10px;
+}
+
+#div3 {
+    width: 60%;
+    background-color: #c37cf3;
+    margin: 10px;
+    padding: 10px;
+}
+
+#div4 {
+    width: 45%;
+    background-color: #f0eea2;
+    margin: 10px;
+    padding: 10px;
+}
+
+#div5 {
+    width: 30%;
+    background-color: #f36868;
+    margin: 10px;
+    padding: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}

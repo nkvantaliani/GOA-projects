@@ -1,0 +1,49 @@
+#p1 {
+    text-decoration: underline double;
+    color: #f0a1c6;
+}
+
+#p2 {
+    text-decoration: underline;
+    color:#f369a9
+}
+
+#p3 {
+    text-decoration: underline dashed;
+    color: #a9b6f1;
+}
+
+#p4 {
+    text-decoration: underline dotted;
+    color: #a8f096;
+}
+
+#p5 {
+    text-decoration: underline wavy;
+    color: #fcf599;
+}
+
+#p6 {
+    text-decoration: overline wavy;
+    color: #dc76fc;
+}
+
+#p7 {
+    text-decoration: line-through double;
+    color: #f36f6f;
+}
+
+#p8 {
+    text-decoration: line-through dashed;
+    color: #76fcf1;
+}
+
+#p9 {
+    text-decoration: overline dashed;
+    color: #89f77f;
+}
+
+#p10 {
+    text-decoration: overline;
+    color: #aa6eb6;
+}

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+
+.a-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.a {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.a img {
+    width: 100%;
+    height: auto;
+}
+
+.a .b {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+}
+
+.a .description {
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.a .title:first-child {
+    border-bottom: 2px solid #ffcc00;
+}
+
+.a .description:last-child {
+    font-style: italic;
+    color: #777;
+}
+
+.a:nth-child(2n) {
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+}

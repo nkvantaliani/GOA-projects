@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(204, 80%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+  }
+  
+  .header {
+    padding: 50px;
+    text-align: center;
+  }
+  
+.header .text{
+  font-weight: 20;
+  white-space: nowrap;
+}
+  .header h1 {
+    font-size: 1.5rem;
+    color: hsl(228, 45%, 44%);
+  }
+  
+  .header .guarantee {
+    font-size: 1rem;
+    color: hsl(150, 100%, 35%);
+    font-weight: bold;
+  }
+  
+  .grid {
+    display: flex;
+    background-color: hsl(204, 80%, 92%);
+  }
+  
+  .subscription, .whyus {
+    padding: 30px;
+  }
+  
+  .subscription {
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+    text-align: center;
+  }
+  
+  .subscription .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .subscription .price span {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  
+  .subscription p {
+    margin: 20px 0;
+  }
+  
+  .subscription button {
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 200px;
+  }
+  
+  .whyus {
+    background-color:hsl(204, 43%, 93%);
+    padding:15px;
+    margin-bottom: 15px;
+  }
+  
+  .whyus h2 {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  .whyus ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+  
+  .whyus li {
+    margin-bottom: 10px;
+  }
+  

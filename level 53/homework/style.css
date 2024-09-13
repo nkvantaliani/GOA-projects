@@ -1,0 +1,98 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    gap: 50px;
+}
+
+.disappear {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: gakroba 3s ease-in-out infinite;
+  }
+
+  @keyframes disappear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+
+}
+
+.spin{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: triali 3s ease-in-out infinite;
+}
+
+
+@keyframes spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(90deg);
+        border-radius: 20%;
+    }
+}
+
+.change{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: lgbt 3s ease-in-out infinite;
+}
+
+
+@keyframes change{
+    from{
+        background-color: lightblue;
+    }
+    to{
+        background-color: blue;
+    }
+}
+
+.BIGspin{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: diditriali 3s ease-in-out infinite;
+}
+
+
+@keyframes BIGspin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+        border-radius: 20%;
+    }
+}
+
+.sizeIncrease{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: gadideba 3s ease-in-out infinite;
+}
+
+
+@keyframes sizeIncrease{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}

@@ -22,7 +22,21 @@ function calculate_area(width = 1, length){
 calculate_area(8, 4);
 
 
+// 4 
 
+function convert_temperature(temp, scale) {
+    if (scale === undefined) {
+        scale = "C"; 
+    }
+
+    if (scale === "C") {
+        console.log((temp * 9 / 5) + 32);
+    } else if (scale === "F") {
+        console.log((temp - 32) * 5 / 9);
+    } else {
+        console.log("Invalid");
+    }
+}
 
 // 5
 

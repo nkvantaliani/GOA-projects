@@ -1,0 +1,41 @@
+body {
+    background-color: hsl(47, 88%, 63%);
+}
+
+img {
+    border-radius: 7px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    padding: 4px;
+    background-color: white;
+}
+
+button {
+    background-color: hsl(47, 88%, 63%);
+    border: none;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 270px;
+}
+
+.pub {
+    margin-right: 190px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: -3px;
+    margin-right: -19px;
+}
+
+.name {
+    display: inline;
+}

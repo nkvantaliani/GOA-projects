@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        } */
+
+        #div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            transition: bottom 1s;
+        }
+    </style>
+</head>
+<body>
+    <button id="butt">CLICK</button>
+    <div id="div"></div>
+    <script>
+        let circle = document.getElementById("div");
+        let button = document.getElementById("butt");
+
+        button.onclick = function() {
+            let pos = 50;
+
+            let moveCircle = setInterval(function() {
+                if (pos >= 200) {
+                    pos -= 5;
+                } else if (pos <= 50) {
+                    pos += 5; 
+                }
+
+                circle.style.bottom = pos + "px";
+
+            }, 500); 
+        };
+    </script>
+</body>
+</html>

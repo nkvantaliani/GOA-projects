@@ -20,4 +20,4 @@ let images = [
       index = 0;
     }
     document.getElementById('slider').src = images[index];
-  }
+}

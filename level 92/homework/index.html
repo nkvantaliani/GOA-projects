@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <input type="password" id="password"  placeholder="Enter password" oninput="pass()"/>
+  <div id="strength" ></div>
+
+  <script>
+    function pass() {
+      let password = document.getElementById("password").value;
+      let strength = document.getElementById("strength");
+      let symbols = "!@#$%^&*";
+      let uppercase = false;
+      let number = false;
+      let symbol = false;
+
+      for (let i of password) {
+        if (i >= "A" && i <= "Z") {
+          uppercase = true;
+        } else if (i >= "0" && i <= "9") {
+          number = true;
+        } else if (symbols.includes(i)) {
+          symbol = true;
+        }
+      }
+       if (password.length >= 10 && uppercase && number && symbol) {
+        strength.textContent = "Strong";
+        strength.style.color = "green";
+      } else if (password.length >= 8 && (uppercase || number)) {
+        strength.textContent = "mid";
+        strength.style.color = "yellow";
+      } else if (password.length >= 6) {
+        strength.textContent = "weak";
+        strength.style.color = "red";
+      }
+    }
+</script>
+</body>
+</html>

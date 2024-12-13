@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <p id="error">yippe</p>
+    
+    <script>
+    let inp = document.getElementById('inp');
+    let error = document.getElementById('error');
+    
+    inp.oninput = function() {
+        let isRight = true;
+        let right = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
+        for (let i of inp.value) {
+            if (!right.includes(i)) {
+                isRight = false;
+                break;
+            }
+        }
+    
+        if (!isRight) {
+            error.style.color = 'red';
+        } else {
+            error.style.color = 'green';
+        }
+    }
+    </script>
+
+</body>
+</html>

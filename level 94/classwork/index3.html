@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+        }
+
+        .responsive-text {
+            font-size: 10vw;
+            max-font-size: 100px; 
+            min-font-size: 20px;  
+            font-weight: bold;
+            transition: font-size 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="responsive-text">
+        This text resizes with the screen!
+    </div>
+
+</body>
+</html>

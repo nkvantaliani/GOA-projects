@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 20px;
+            background-color: #f8b2d383;
+        }
+        .div1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        select {
+            margin: 10px 0;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: pink;
+            border: none;
+            
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <label>Choose a filter:</label>
+    <select id="filter">
+        <option value="">All</option>
+        <option value="მოგზაურობა">მოგზაურობა</option>
+        <option value="მოხსენება">მოხსენება</option>
+        <option value="გაცნობიერება">გაცნობიერება</option>
+    </select>
+    <button id="filterBtn">Apply Filter</button>
+</div>
+<div class="div2">
+
+    <h2>letters</h2>
+    <ul id="list">
+    </ul>
+</div>
+
+
+
+
+<script>
+const emails = [
+    { subject: "მოგზაურობა", content: "ნუ დაგავიწყდებათ თქვენი ბილეთები", receivedDate: "2024-12-15" },
+    { subject: "მოხსენება", content: "გთხოვთ, წაიკითხოთ ბოლო ანგარიში", receivedDate: "2024-12-12" },
+    { subject: "მოგზაურობა", content: "ძალიან კარგი შეთავაზება მაქვს", receivedDate: "2024-12-13" },
+    { subject: "გაცნობიერება", content: "შესაძლებელია მცირე შეცდომები", receivedDate: "2024-12-10" }
+];
+
+let filters = document.getElementById("filter");
+let filterBtn = document.getElementById("filterBtn");
+let list = document.getElementById("list");
+
+
+function filterEmails() {
+    const filter = filters.value;
+    list.innerHTML = ""; 
+
+    for (let i of emails) {
+        if (!filter || i.subject.startsWith(filter)) {
+            const item = document.createElement("li");
+            item.textContent = `${i.subject}: ${i.content} (${i.receivedDate})`;
+            list.appendChild(item);
+        }
+    }
+}
+
+filterBtn.addEventListener("click", filterEmails);
+</script>
+</body>
+</html>

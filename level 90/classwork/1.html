@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #2b2b2b;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #ff0000;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card .rating {
+            font-size: 1.2rem;
+            color: #00c853;
+        }
+    </style>
+</head>
+<body>
+    <h1>ტექნიკა და მათ რეიტინგები</h1>
+    <div class="controls">
+        <button id="filter">რეიტინგი 3ზე მეტი ფილტრი</button>
+        <button id="zrdadoba">რეიტინგი ზრდადობით</button>
+        <button id="klebadoba">რეიტინგი ნაკლებობით</button>
+        <button id="random">რანდომიზირება</button>
+    </div>
+    <div class="card-container" id="cardContainer"></div>
+
+    <script>
+        const cards = [
+            { title: "Mobile Phone", rating: 4.2, image: "https://www.zambiaimmigration.gov.zm/wp-content/uploads/2016/10/mobile-phone-white-300x200.png" },
+            { title: "Laptop", rating: 3.8, image: "https://image.made-in-china.com/43f34j00rNOhPkszlncg/Original-Factory-Laptop-15-6inch-for-Business-Laptop-4G-N4020-N4120-Computer-Notebooks-Win10-Win-11-Education-Laptop.jpg" },
+            { title: "Headphone", rating: 2.9, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQezTrJy9l-oBpLoA4AzJIQ8FepbgOyBTEiQ&s" },
+            { title: "Tablet", rating: 4.5, image: "https://gadgetsoman.com/wp-content/uploads/WhatsApp-Image-2023-11-21-at-10.30.56-AM-300x300.jpeg.webp" },
+            { title: "Camera", rating: 3.3, image: "https://www.whatdigitalcamera.com/wp-content/uploads/sites/13/2016/11/IMG_0180-2-630x420-630x420-300x200.jpg" },
+            { title: "Smartwatch", rating: 4.8, image: "https://telecomtalk.info/wp-content/uploads/2022/10/inbase-urban-fit-m-smartwatch-launched-in-india-details-300x200.jpg.webp" },
+            { title: "Monitor", rating: 3.1, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqedAIWP66VQOXbssOkx5RI71F7Xu3nTLUbw&s" },
+            { title: "Keyboard", rating: 2.7, image: "https://static.vecteezy.com/system/resources/thumbnails/049/216/192/small/black-keyboard-with-white-keys-free-png.png" },
+            { title: "Mouse", rating: 3.9, image: "https://static.vecteezy.com/system/resources/thumbnails/030/910/345/small/tech-harmony-perspective-on-mouse-with-white-background-generative-ai-photo.jpg" },
+            { title: "Speaker", rating: 4.0, image: "https://ecommerce.mysav.eu/928-home_default/speaker-woofer-jbl-partybox-200-300.jpg" }
+        ];
+
+        const container = document.getElementById('cardContainer');
+
+        function displayCards(cardList) {
+            container.innerHTML = "";
+            cardList.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+                cardElement.innerHTML = `
+                    <img src="${card.image}" alt="${card.title}">
+                    <h3>${card.title}</h3>
+                    <p class="rating">Rating: ${card.rating}</p>
+                `;
+                container.appendChild(cardElement);
+            });
+        }
+
+        displayCards(cards);
+
+        document.getElementById('filter').addEventListener('click', () => {
+            const filteredCards = cards.filter(card => card.rating > 3);
+            displayCards(filteredCards);
+        });
+
+        document.getElementById('zrdadoba').addEventListener('click', () => {
+            const sortedCards = [...cards].sort((a, b) => a.rating - b.rating);
+            displayCards(sortedCards);
+        });
+
+        document.getElementById('klebadoba').addEventListener('click', () => {
+            const sortedCards = [...cards].sort((a, b) => b.rating - a.rating);
+            displayCards(sortedCards);
+        });
+
+        document.getElementById('random').addEventListener('click', () => {
+            const randomizedCards = [...cards].sort(() => Math.random() - 0.5);
+            displayCards(randomizedCards);
+        });
+    </script>
+</body>
+</html>

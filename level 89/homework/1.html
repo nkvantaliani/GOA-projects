@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card-content p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Card Design</h1>
+
+    <div class="buttons">
+        <button onclick="filterBelowAverage()">Filter Below Average</button>
+        <button onclick="sortAscending()">Sort by Rating (Ascending)</button>
+        <button onclick="sortDescending()">Sort by Rating (Descending)</button>
+        <button onclick="sortRandom()">Sort Randomly</button>
+    </div>
+
+    <div class="cards" id="cardsContainer">
+        <div class="card" data-rating="3">
+            <img src="https://via.placeholder.com/200x150" alt="Placeholder">
+            <div class="card-content">
+                <h3>Card Title 1</h3>
+                <p>Rating: 3</p>
+            </div>
+        </div>
+        <div class="card" data-rating="5">
+            <img src="https://via.placeholder.com/200x150" alt="Placeholder">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <p>Rating: 5</p>
+            </div>
+        </div>
+        <div class="card" data-rating="2">
+            <img src="https://via.placeholder.com/200x150" alt="Placeholder">
+            <div class="card-content">
+                <h3>Card Title 3</h3>
+                <p>Rating: 2</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterBelowAverage() {
+            const cards = document.querySelectorAll('.card');
+            let totalRating = 0;
+            cards.forEach(card => {
+                totalRating += parseInt(card.dataset.rating);
+            });
+            const average = totalRating / cards.length;
+
+            cards.forEach(card => {
+                const rating = parseInt(card.dataset.rating);
+                if (rating < average) {
+                    card.classList.add('hidden');
+                } else {
+                    card.classList.remove('hidden');
+                }
+            });
+        }
+
+        function sortAscending() {
+            sortCards((a, b) => a.dataset.rating - b.dataset.rating);
+        }
+
+        function sortDescending() {
+            sortCards((a, b) => b.dataset.rating - a.dataset.rating);
+        }
+
+        function sortRandom() {
+            sortCards(() => Math.random() - 0.5);
+        }
+
+        function sortCards(compareFunction) {
+            const container = document.getElementById('cardsContainer');
+            const cards = Array.from(container.children);
+            cards.sort(compareFunction);
+            cards.forEach(card => container.appendChild(card));
+        }
+    </script>
+</body>
+</html>

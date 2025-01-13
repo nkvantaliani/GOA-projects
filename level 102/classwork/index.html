@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .main {
+    margin: 100px;
+}
+
+#p {
+    display: block;
+    font-size: 120px;
+    text-align: center;
+}
+
+#BTNdiv {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: pink;
+    color: white;
+    border: 1px solid black;
+    transition: background-color 1.5s;
+    
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(245, 122, 142);
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#p {
+    font-size: 100px;
+    margin: 20px 0;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#BTNdiv {
+    margin-top: 20px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: #ff7f7f;
+    color: white;
+    border: 1px solid #f4f4f9;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4c4c;
+}
+
+.btn:active {
+    background-color: #ff3333;
+}
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <p id="p">0</p>
+        <div id="BTNdiv">
+            <input type="number" id="input" class="input"  /><br><br>
+            <button id="decrease" class="btn">decrease</button>
+            <button id="reset" class="btn">reset</button>
+            <button id="increase" class="btn">increase</button>
+        </div>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: red;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 2px solid #52b3d9;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  
+  .desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .card.A {
+    grid-column: span 2;
+    height: 100px;
+  }
+  
+  .card.B, .card.E {
+    height: 100px;
+  }
+  
+  .card.C, .card.D {
+    height: 100px;
+  }
+  
+  .card.C {
+    grid-column: span 1;
+  }
+  
+  .card.D {
+    grid-column: span 1;
+  }
+
+  .mobile {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mobile .card {
+    height: 70px;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Level 4</h1>
+    <h2>Card Layout 2</h2>
+    <div class="layout">
+      <div class="desktop">
+        <div class="card A">A</div>
+        <div class="card B">B</div>
+        <div class="card E">E</div>
+        <div class="card C">C</div>
+        <div class="card D">D</div>
+      </div>
+
+      <div class="mobile">
+        <div class="card A">A</div>
+        <div class="card B">B</div>
+        <div class="card E">E</div>
+        <div class="card C">C</div>
+        <div class="card D">D</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -46,14 +46,20 @@
 </head>
 <body>
 <div class="div1">
-    <label>Choose a filter:</label>
+    <label>choose a filter:</label>
     <select id="filter">
         <option value="">All</option>
         <option value="მოგზაურობა">მოგზაურობა</option>
         <option value="მოხსენება">მოხსენება</option>
         <option value="გაცნობიერება">გაცნობიერება</option>
     </select>
-    <button id="filterBtn">Apply Filter</button>
+    <h2>Add a New Email:</h2>
+    <input type="text" id="newSubject" placeholder="Subject" />
+    <input type="text" id="newContent" placeholder="Content" />
+    <button id="addEmail">Add Email</button>
+
+
+    <button id="filterBtn">apply filter</button>
 </div>
 <div class="div2">
 
@@ -76,6 +82,9 @@ const emails = [
 let filters = document.getElementById("filter");
 let filterBtn = document.getElementById("filterBtn");
 let list = document.getElementById("list");
+const newSubjectInput = document.getElementById("newSubject");
+const newContentInput = document.getElementById("newContent");
+const addEmailButton = document.getElementById("addEmail");
 
 
 function filterEmails() {
@@ -91,7 +100,30 @@ function filterEmails() {
     }
 }
 
+function addEmail() {
+    const newSubject = newSubjectInput.value.trim();
+    const newContent = newContentInput.value.trim();
+
+    if (newSubject && newContent) {
+        const newEmail = {
+            subject: newSubject,
+            content: newContent,
+            receivedDate: new Date().toISOString().split('T')[0] // Adds current date
+        };
+        emails.push(newEmail);
+        newSubjectInput.value = ""; // Clear input fields
+        newContentInput.value = "";
+        filterEmails(); // Update the list
+    } else {
+        alert("Please fill out both the subject and content fields.");
+    }
+}
+
+// მოვლენის დამუშავებლები
+
 filterBtn.addEventListener("click", filterEmails);
+addEmailButton.addEventListener("click", addEmail);
+
 </script>
 </body>
 </html>

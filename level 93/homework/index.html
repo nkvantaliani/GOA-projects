@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cookie Clicker</h1>
+        <div class="stats">
+            <p>Cookies: <span id="cookie-count">0</span></p>
+            <p>Gold: <span id="gold-count">0</span></p>
+        </div>
+        <div class="button-container">
+            <button id="cookie-button"> Click Cookie</button>
+        </div>
+
+        <h2>Upgrades</h2>
+        <div class="upgrades">
+            <div class="upgrade">
+                <button id="buy-finger">Buy Finger (+1 Click)</button>
+                <p>Cost: <span id="finger-cost">50</span> Gold</p>
+            </div>
+            <div class="upgrade">
+                <button id="buy-mines">Buy Mines (+1 Gold)</button>
+                <p>Cost: <span id="mines-cost">100</span> Cookies</p>
+            </div>
+            <div class="upgrade">
+                <button id="buy-double-cookies">Double Cookies Per Click</button>
+                <p>Cost: <span id="double-cookies-cost">200</span> Gold</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    let cookies = 0;
+        let gold = 0;
+        let cookiesPerClick = 1;
+        let goldPerClick = 1;
+        let fingerCost = 50;
+        let minesCost = 100;
+        let doubleCookiesCost = 200;
+        
+        const cookieButton = document.getElementById('cookie-button');
+        const cookieCountElement = document.getElementById('cookie-count');
+        const goldCountElement = document.getElementById('gold-count');
+        
+        const buyFingerButton = document.getElementById('buy-finger');
+        const fingerCostElement = document.getElementById('finger-cost');
+        const buyMinesButton = document.getElementById('buy-mines');
+        const minesCostElement = document.getElementById('mines-cost');
+        const buyDoubleCookiesButton = document.getElementById('buy-double-cookies');
+        const doubleCookiesCostElement = document.getElementById('double-cookies-cost');
+        
+        cookieButton.addEventListener('click', () => {
+            cookies += cookiesPerClick;
+            gold += goldPerClick;
+            updateUI();
+        });
+        
+        buyFingerButton.addEventListener('click', () => {
+            if (gold >= fingerCost) {
+                gold -= fingerCost;
+                cookiesPerClick++;
+                fingerCost = 2;
+                updateUI();
+            }
+        });
+        
+        buyMinesButton.addEventListener('click', () => {
+            if (cookies >= minesCost) {
+                cookies -= minesCost;
+                goldPerClick++;
+                minesCost= 2;
+                updateUI();
+            }
+        });
+        
+        buyDoubleCookiesButton.addEventListener('click', () => {
+            if (gold >= doubleCookiesCost) {
+                gold -= doubleCookiesCost;
+                cookiesPerClick = 2;
+                doubleCookiesCost= 2;
+                updateUI();
+            }
+        });
+        
+        function updateUI() {
+            cookieCountElement.textContent = cookies;
+            goldCountElement.textContent = gold;
+        
+            fingerCostElement.textContent = fingerCost;
+            minesCostElement.textContent = minesCost;
+            doubleCookiesCostElement.textContent = doubleCookiesCost;
+        
+            buyFingerButton.disabled = gold < fingerCost;
+            buyMinesButton.disabled = cookies < minesCost;
+            buyDoubleCookiesButton.disabled = gold < doubleCookiesCost;
+        }
+        
+        updateUI();</script>
+</body>
+</html>

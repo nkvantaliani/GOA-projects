@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <p id="paragraph"></p>
+    </main>
+    
+    <script>
+        const paragraph = document.getElementById("paragraph");
+const api = fetch("https://jsonplaceholder.typicode.com/users");
+
+const renderInfo = () => {
+    try {
+        api
+            .then(res => res.json)
+            .then(res => console.log(res))
+            .catch(err => console.log(`There was an error found in your code: ${err}, code status: ${res.status}`))
+
+        paragraph.textContent = `${api.name}`;
+    } catch {
+        console.log(`Error: ${Error}`);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", (e) => {
+    renderInfo();
+})
+    </script>
+</body>
+</html>

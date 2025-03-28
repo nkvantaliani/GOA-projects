@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button onclick="joke()">nikolozis joke</button>
+
+    <script>
+        async function joke() {
+            try {
+                let res = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
+                let data = await res.json()
+                let jokeDiv = document.getElementById('container')
+
+                jokeDiv.innerText = data.setup + data.delivery
+
+
+            } catch (error) {
+                console.log("error",error)
+            }
+        }
+
+        joke();
+    </script>
+</body>
+</html>

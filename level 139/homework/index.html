@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center space-y-6">
+
+    <input type="text" id="dateInput" placeholder="enter time" class="px-4 py-2 rounded-lg text-black" />
+
+    <button onclick="startCountdown()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">
+      Start
+    </button>
+
+    <div id="countdown" class="text-2xl font-mono mt-4"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
